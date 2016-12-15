@@ -1,4 +1,5 @@
 DECLARE
 		@edad real;
 		SET @edad = 25;
-		PRINT 'La edad es:' + str(@edad)
+			IF (@edad < 30) AND (@edad >= 15)
+				PRINT 'JOVENES';
