@@ -34,3 +34,18 @@ END CATCH
 BEGIN CATCH
 	PRINT ERROR_MESSAGE();
 END CATCH
+
+/*Utilizando RAISERROR y forzando la salida*/
+DECLARE
+	@edad int,
+	@edad2 int
+SET @edad = 8;
+SET @edad2 = 90;
+IF (@edad2 >65)
+	BEGIN
+	RAISERROR('No es posible',9,1);
+	set noexec on
+	END
+PRINT @edad2;
+set noexec off
+print 'hola';
