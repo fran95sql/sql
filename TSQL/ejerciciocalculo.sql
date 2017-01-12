@@ -28,4 +28,5 @@ SELECT  CASE
             WHEN @suma < 50 THEN sqrt(@num^2+@num2^2+@num3^2)
             WHEN @suma = 50 THEN @num^2+@num2^2+@num3^2
             WHEN @suma > 50 THEN CAST(@num as float)/(@num2*@num3)
+	    /*CAST convierte un tipo de valor en otro*/
         END
