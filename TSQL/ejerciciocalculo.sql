@@ -15,12 +15,15 @@ BEGIN
 	print @media;
 END
 
-DECLARE @num smallint, @num2 smallint, @num3 smallint;
-
-SET @num = 30;
-SET @num2 = 10;
-SET @num3 = 10;
-
+/*Ejercicio de los cuadrados*/
+DECLARE @num smallint, @num2 smallint, @num3 smallint, @raiz float;
+BEGIN
+	SET @num = 30;
+	SET @num2 = 10;
+	SET @num3 = 10;
+	SET @raiz = sqrt(@num^2+@num2^2+@num3^2);
+	print @raiz;
+END
 DECLARE @suma int;
 SET @suma = @num+@num2+@num3;
 
