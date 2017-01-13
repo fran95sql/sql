@@ -1,0 +1,8 @@
+/*Ejemplo: nombre del cursor:C1*/
+DECLARE
+  C1 CURSOR FOR SELECT* FROM empleados, @nomb varchar, @ape varchar, @FA int;
+OPEN C1; /*RESERVAMOS EL ESPACIO EN MEMORIA*/
+WHILE @@FETCH_STATUS=0
+  FETCH  C1 INTO @nomb,@ape,@FA;
+CLOSE C1;
+DEALLOCATE C1;/*LIBERAMOS EL ESPACIO EN MEMORIA*/

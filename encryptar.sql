@@ -1,4 +1,3 @@
-
 /* crear tabla con dni varvinary(256) porque el argoritmo es AES_256*/
 /*create master key encryption by password ='MiClaveSegura';*/
 
