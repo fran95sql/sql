@@ -7,7 +7,7 @@ create table Empleado (
 
 create table Jefe (
 	e# varchar (8) not null constraint PK_Jefe primary key,
-	antigüedad tinyint
+	antigüedad tinyint,
 	constraint FK_Jefe foreign key (e#)  references Empleado (e#) on update cascade on delete cascade
 );
 
