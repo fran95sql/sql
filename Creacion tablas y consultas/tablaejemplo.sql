@@ -20,7 +20,7 @@ ciudad varchar (40)
 create table Trabaja (
 	e# varchar(8) not null,
 	p# varchar(8) not null,
-	nhoras tinyint
+	nhoras tinyint,
 	constraint PK_TRABAJA primary key (e#,p#),
 	constraint FK_TRAB_E foreign key (e#) references Empleado (e#) on update cascade on delete cascade
 );
