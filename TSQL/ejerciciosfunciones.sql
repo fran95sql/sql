@@ -1,4 +1,4 @@
-CREATE FUNCTIOM  mediae (@c float)
+CREATE FUNCTION  mediae (@c float)
 RETURNS float
 BEGIN
   SET
