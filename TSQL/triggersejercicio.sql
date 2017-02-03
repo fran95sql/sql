@@ -45,3 +45,16 @@ AS
 		ROLLBACK TRANSACTION
 		END
 	END
+/*Evitar que se actualice un sueldo a más del 10% del anterior*/
+	CREATE TRIGGER salemplenorepe2
+ON Empleado
+FOR UPDATE
+AS
+BEGIN
+	DECLARE @salant float = (select d.salario from deleted d , inserted i
+						where (d.e# = i.e#));
+	DECLARE @salanuevo float = (select salario from inserted);
+	If @salanuevo > (@salant +(@salant*0.1))
+		print 'No se cumple la condición';
+		ROLLBACK TRANSACTION
+END
