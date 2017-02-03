@@ -32,3 +32,16 @@ AS
 		CLOSE C1;
 		DEALLOCATE C1;
 	END
+/*Evitar que se inserte un sueldo duplicado*/
+CREATE TRIGGER salemplenorepe
+ON Empleado
+FOR INSERT
+AS
+	BEGIN
+	if exists (select * from Empleado e, inserted where (e.salario = inserted.salario))
+		BEGIN
+		/*La tabla inserted almacena temporalmente las inserciones*/
+		print'Error, el salario introducido ya existe';
+		ROLLBACK TRANSACTION
+		END
+	END
