@@ -10,7 +10,7 @@ IF ((select count(e#) from Empleado) > 3)
 	END
 ELSE
 	print 'El empleado ha sido registrado';
-/**/
+/*Impedir que un empleado supere el sueldo medio*/
 CREATE TRIGGER salario
 ON Empleado
 FOR UPDATE
