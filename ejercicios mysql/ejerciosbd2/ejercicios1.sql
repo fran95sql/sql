@@ -28,3 +28,7 @@ explain select title from titulo
     where pi.id between 1 and 10;
    -- Devuelve  type range para la tabla pi, y type eq_reff (lee todas las filas con valores en el índice que coincidan:
    -- sólo con pk,unique, prefijo mas a la iizda de la clave).
+   
+   -- Ej c
+   explain select title from title join participantesPeli pi on (titulo.id= pi.movie_id);
+   -- Type: NULL no se utilizan índice para la consulta
