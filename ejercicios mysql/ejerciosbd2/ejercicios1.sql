@@ -18,3 +18,13 @@ msqlsla -v root -p --delimiter ";" --create= "create table t (i int); insert int
   --concurency=60 --iterations= 100
   
 mysqlslap -u root -p --concurrency=5 --iteration= 100 --query=query.sql/*Consulta*/ --create=create.sqñ /*crea tablas*/
+
+-- ej 6a 
+-- explain select * from nombrePersonasPeli where id=45678 or name_pcode_cf = 'a432';
+  -- Devuelve type idex_merge: Escanea la tabla con la combinación de índicesposteriormente combina los resultados.
+-- 6b (uso de join)
+explain select title from titulo
+  join participantesPeli pi on  (titulo.id=pi.movie_id)
+    where pi.id between 1 and 10;
+   -- Devuelve  type range para la tabla pi, y type eq_reff (lee todas las filas con valores en el índice que coincidan:
+   -- sólo con pk,unique, prefijo mas a la iizda de la clave).
