@@ -1,0 +1,11 @@
+use iesalandalus;
+-- insert into alumno values (0, 'Beatriz','Lara','1995-07-25','F',5.60, 'Alimoche', 'Abla',04008,'ALM');
+insert into alumno values(2,'Miguel' , 'Alvarez' ,'1994-07-05', 'M' ,7.20, 'Salida' , 'Guadix' ,18003, 'GRA');
+insert into alumno values(3,'Ana' , 'Delgado' ,'1993-07-15', 'F' ,7.85, 'Rosal', 'Baza' ,18003, 'GRA');
+insert into alumno values(4,'J. Luis' , 'Lopez' ,'1994-07-12', 'M' ,6.28, 'Tórtola' , 'Fiñana' ,04008, 'ALM');
+insert into alumno values(5,'Alexandra' , 'Abascal' ,'1993-07-22', 'F' ,9.42, 'La pera' , 'Monachil' ,18003, 'GRA');
+insert into alumno values(6,'Benito' , 'Ruiz' ,'1996-07-04', 'M' ,7.05, 'Salada' , 'Ogijares' ,18003, 'GRA');
+insert into alumno values(7,'Celia' , 'Diaz' ,'1992-07-28', 'F' ,6.95, 'Roma' , 'Atarfe' ,18003, 'GRA');
+insert into alumno values(8,'Juan' , 'Nuñez' ,'1990-07-30', 'M' ,5.3, 'Pizzería' , 'Almería' ,23005, 'ALM');
+insert into alumno values(9,'Desire' , 'Ramos' ,'1994-07-20', 'F' ,8.64, 'Retroceso' , 'Martos' ,23110, 'JAE');
+insert into alumno values(10,'Lute' , 'Sanhez' ,'1996-07-09', 'M' ,10, 'Recobeco' , 'Ubeda' ,23120, 'JAE');

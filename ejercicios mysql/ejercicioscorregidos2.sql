@@ -1,0 +1,54 @@
+-- ACTIVIDADES 4.1
+-- use tests;
+-- delimiter //
+-- create procedure año_act()
+	-- begin
+		-- select year(now());
+-- 	end; //
+    
+--  Actividad 2
+-- use tests;
+-- set @mivar = 1234;
+-- select @mivar;
+
+-- Actividad 3
+	-- use tests;
+    -- delimiter //
+    -- create procedure sum1 (inout sumar int)
+		-- begin
+			-- set sumar = sumar +1;
+        -- end //
+	-- delimiter ;
+    -- call sum1(@mivar);
+    -- select @mivar;
+
+-- Actividad 4
+-- use tests;
+-- delimiter //
+-- create procedure palabra (IN cadena varchar (20))
+	-- begin
+		-- set cadena = substr(cadena,1,3);
+        -- set cadena = UPPER(cadena);
+    -- select cadena;
+    -- end//
+    -- delimiter ;
+    -- call palabra('palabraaa');
+
+-- Actividad 6
+-- use tests;
+-- delimiter //
+ -- create function hipotenusa (c1 int, c2 float)
+	-- returns float
+   -- deterministic
+	-- begin
+	-- 	declare h float;
+     -- set h = sqrt((pow(c1, 2) + pow(c2,3)));
+	-- return h;
+   -- end; //
+   -- delimiter ;
+    -- select hipotenusa(2,4);
+
+-- Actividad 7
+-- use test;
+-- create function dias(dia integer)
+	-- returns varchar(1000)

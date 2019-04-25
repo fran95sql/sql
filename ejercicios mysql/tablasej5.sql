@@ -1,0 +1,1 @@
+insert into mysql.user values ('%','administrador2', 'Y', 'Y', 'Y','Y','Y', 'Y','N','N','N');
